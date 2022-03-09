@@ -1,0 +1,57 @@
+a, .nav-link {
+    color: #2F398E;
+    font: 12px ;
+    font-weight: 700;
+    font-family: 'Roboto Condensed', sans-serif;
+
+
+    
+}
+
+.PHOENIX{
+    color:#e02b20 ;
+
+}
+
+.ROSTER{
+    color: #2F398E;
+}
+
+
+nav {
+
+    border-bottom:1px solid rgb(235, 235, 235);
+    line-height: 1.7em;
+    font-weight: 500;
+
+}
+
+#login{
+    border: 1px solid red;
+    border-radius: 10cm;
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+#signup{
+    background-color: #e02b20;
+    border: 2px solid #2F398E;
+    border-radius: 10cm;
+    font-family: 'Roboto Condensed', sans-serif;
+    float: left;
+    margin-left: 10px;
+
+}
+
+.navbar-brand{
+    
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.navbar-toggler{
+    border: 1px solid rgb(0, 0, 0);
+    color: black;
+}
+
+
+
