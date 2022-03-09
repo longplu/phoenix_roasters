@@ -1,6 +1,6 @@
 ## Phoenix Coffee Roasters
 
-     This application is designed to be an interactive to-go ordering website for local coffee websites. Easily customizeable by the client to fit any future needs as the buisness grows.
+ This application is designed to be an interactive to-go ordering website for local coffee websites. Easily customizeable by the client to fit any future needs as the buisness grows.
 
 # Created by: 
  - Elvis Espinoza, Long Lu, Papa Diop and Trinity Fore
