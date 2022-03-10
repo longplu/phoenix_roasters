@@ -3,6 +3,9 @@ from django.http import HttpResponse
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.detail import DetailView
 
+from main_app.models import ShoppingCart
+
+
 
 
 # Create your views here.
