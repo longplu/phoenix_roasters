@@ -17,14 +17,20 @@ def contactus(request):
 def location(request):
     return render(request, 'location.html')
 
-def products_index(request):
-    pass
-
-def products_detail(request):
-    pass
-
 def shoppingcart(request):
     pass
+
+def products_index(request):
+    products = Product.objects.all()
+    return render(request, 'products/index.html', {
+        'products': products,
+    })
+
+def products_detail(request, product_id):
+    product = Product.objects.get(id=product_id)
+    return render(request, 'products/detail.html', {
+        'product': product,
+    })
 
 """"""""""""""""""
 
