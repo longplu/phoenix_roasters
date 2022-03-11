@@ -47,13 +47,16 @@
           </ul>
           <ul class="nav1 navbar-nav ms-auto ">
             <div class="row mx-md-n5">
-                <li id="login" class="nav-item  col px-md-6"> <a href="/login" class='nav-link  text-center' style="width: 70px;">Log In</a> </li>
+                <li id="login" class="nav-item  col px-md-6"> <a href="{% url 'login' %}" class='nav-link  text-center' style="width: 70px;">Log In</a> </li>
                 <li id="signup" class="nav-item  col px-md-7"> <a href="/signup" class=' nav-link text-white ' style="width: 70px;">Sign up </a> </li>
             </div>
         </ul>
         </div>
         </div>
       </nav>
-    
+      <main>
+        {% block content %} 
+        {% endblock %}
+    </main>
 </body>
 </html>
