@@ -3,6 +3,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.detail import DetailView
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
+from .forms import UserForm
 
 from .models import Product, ShoppingCart
 
@@ -37,14 +38,14 @@ def products_detail(request, product_id):
 def signup(request):
     error_message = ''
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = UserForm(request.POST)
         if form.is_valid():
             user = form.save()
             login(request, user)
             return redirect('home')
         else:
             error_message = 'invalid sign up - please try again'
-    form = UserCreationForm()
+    form = UserForm()
     context = {'form':form, 'error':error_message}
     return render(request, 'registration/signup.html', context)
 
@@ -59,3 +60,6 @@ class ProductUpdate(UpdateView):
 
 class ProductDelete(DeleteView):
     pass
+
+
+    
