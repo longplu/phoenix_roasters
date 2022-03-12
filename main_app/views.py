@@ -19,14 +19,20 @@ def contactus(request):
 def location(request):
     return render(request, 'location.html')
 
-def products_index(request):
-    pass
-
-def products_detail(request):
-    pass
-
 def shoppingcart(request):
     pass
+
+def products_index(request):
+    products = Product.objects.all()
+    return render(request, 'products/index.html', {
+        'products': products,
+    })
+
+def products_detail(request, product_id):
+    product = Product.objects.get(id=product_id)
+    return render(request, 'products/detail.html', {
+        'product': product,
+    })
 
 def signup(request):
     error_message = ''
@@ -41,6 +47,7 @@ def signup(request):
     form = UserCreationForm()
     context = {'form':form, 'error':error_message}
     return render(request, 'registration/signup.html', context)
+
 
 """"""""""""""""""
 
