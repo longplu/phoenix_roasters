@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Menu</h1>
+
+{% for products in product %}
+    <div class="card">
+        <a href="{% url 'detail' product.id %}">
+            <div class="card-content">
+                <span class="card-title">{{ product.image_url }}</span>
+                <p>{{ product.name }}</p>
+                <p>{{ product.price}}</p>
+            </div>
+        </a>
+    </div>
+
+{% endfor %}
+
+{% endblock %}
+
