@@ -88,3 +88,6 @@ class ProductUpdate(UpdateView):
 
 class ProductDelete(DeleteView):
     pass
+
+
+    
