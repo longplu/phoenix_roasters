@@ -39,7 +39,7 @@ def signup(request):
             return redirect('home')
     else:
         signup_form = SignupForm()
-    return render(request, 'registration/singup.html', context={"signup_form": signup_form})
+    return render(request, 'registration/signup.html', context={"signup_form": signup_form})
 
 
 def shoppingcarts_index(request):
