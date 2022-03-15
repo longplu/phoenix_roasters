@@ -21,9 +21,17 @@
 	<h1 class=" btn-white"></h1>
 	<a href="/"><i class=" icon1 icon bi bi-arrow-left-square btn  ms-3 " style="size: 50%;"></i></a>
 
+<<<<<<< HEAD
 	</form>
 	<form action="{% url 'signup' %}" method="post">
         {% csrf_token %}
+=======
+<form action="{% url 'signup' %}" method="POST">
+    {% csrf_token %}
+    {{ signup_form.as_p }}
+    <input type="submit" value="Sign Up">
+</form>
+>>>>>>> master
 
 		<div class="card text-center mx-auto shadow-lg p-3 mb-5 bg-white rounded" style="width: 400px; height:max-content;">
 			<div class="card-header bg-white"><a href="/" class='navbar-brand btn btn-outline-danger btn-rounded btn-lg bi bi-cup-fill  ' style="font-size:24px;"> Phoenix Roasters </a></div>
