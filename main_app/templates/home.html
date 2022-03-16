@@ -72,30 +72,29 @@
 <br>
 <br>
 <br>
-<section style="background-color: rgb(240, 240, 240);">
+<section style="background-color: rgb(255, 255, 255);">
    <h1>What's Your Favorite?</h1>
 
 
-{% for product in products %}
-   <div id="wrapper">
-   <div class='container '>
-    <div class="card mx-auto col-md-8 col-10 mt-5 pt-4 shadow-lg p-3 mb-5"style="box-shadow: 1px 1px 7px black; " >
-        <div class="d-flex  ">
-            
-        </div> <img class='mx-auto img-thumbnail' src="{{ product.image_url }}" width="auto" height="auto" style="border-color: white;" />
+
+<div id="wrapper">
+  {% for product in products %}
+   <div class='container'>
+      <div class="card mx-auto col-md-8 col-10 mt-5 pt-4 shadow-lg p-3 mb-5"style="box-shadow: 1px 1px 7px black; " >
+          <img class='mx-auto img-thumbnail' src="../static/images/coffee3.jpeg" width="auto" height="auto" style="border-color: white;" />
         <div class="card-body text-center mx-auto">
             <h5 class="card-title">{{ product.name }}</h5>
             <p class="card-text">{{ product.price }}</p>
         </div>
-        <div class="btn"> <button type="button" class="btn btn-danger">Add Cart</button>
-        </div>
+        <div class="btn"> <button type="button" class="btn btn-danger">Add Cart</button></div>
     </div>
   </div> 
-{% endfor %}
 
 
 
+  {% endfor %}
 </div>
+
 </section>
     {% endblock %}
 </body>
