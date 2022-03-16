@@ -1,211 +1,181 @@
 * {
-    margin:0;
-    padding:0;
-    }
-
-
-
-a, .nav-link {
-    color: #2F398E;
-    font: 12px ;
-    font-weight: 700;
-    font-family: 'Roboto Condensed', sans-serif;
-
-
-    
+  margin: 0;
+  padding: 0;
 }
 
-.PHOENIX{
-    color:#e02b20 ;
-
+a,
+.nav-link {
+  color: #2f398e;
+  font: 12px;
+  font-weight: 700;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
-.ROSTER{
-    color: #2F398E;
+.PHOENIX {
+  color: #e02b20;
 }
 
+.ROSTER {
+  color: #2f398e;
+}
 
 nav {
-
-    border-bottom:1px solid rgb(235, 235, 235);
-    line-height: 1.7em;
-    font-weight: 500;
-
+  border-bottom: 1px solid rgb(235, 235, 235);
+  line-height: 1.7em;
+  font-weight: 500;
 }
 
-#login{
-    border: 1px solid red;
-   
-    font-family: 'Roboto Condensed', sans-serif;
+#login {
+  border: 1px solid red;
 
+  font-family: "Roboto Condensed", sans-serif;
 }
 
-#signup{
-    background-color: #e02b20;
-    border: 2px solid #2F398E;
-   
-    font-family: 'Roboto Condensed', sans-serif;
-    float: left;
-    margin-left: 10px;
+#signup {
+  background-color: #e02b20;
+  border: 2px solid #2f398e;
 
+  font-family: "Roboto Condensed", sans-serif;
+  float: left;
+  margin-left: 10px;
 }
 
-.navbar-brand{
-    
-    font-family: 'Roboto Condensed', sans-serif;
+.navbar-brand {
+  font-family: "Roboto Condensed", sans-serif;
 }
 
-.navbar-toggler{
-    border: 1px solid rgb(0, 0, 0);
-    color: black;
+.navbar-toggler {
+  border: 1px solid rgb(0, 0, 0);
+  color: black;
 }
 
 .text-hover {
+  position: absolute;
+
+  bottom: 20px;
+  left: -15%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 250px;
+
+  text-align: center;
+}
+
+#text-hover1 {
+  font-family: "Roboto Condensed", sans-serif;
+  letter-spacing: normal;
+  font-size: 40px;
+  color: #e02b20;
+  font-weight: 200;
+}
+.COFFEE {
+  color: #2f398e;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: rgb(255, 255, 255);
+  }
+  .text-hover {
     position: absolute;
-    
+
     bottom: 20px;
     left: -15%;
     z-index: 10;
     padding-top: 20px;
     padding-bottom: 250px;
-   
+
     text-align: center;
-}
+  }
 
-#text-hover1{
-    font-family: 'Roboto Condensed', sans-serif;
+  #text-hover1 {
+    font-family: "Roboto Condensed", sans-serif;
     letter-spacing: normal;
-    font-size: 40px;
-    color:#e02b20 ;
+    font-size: 20px;
+    color: #e02b20;
     font-weight: 200;
-  
-}
-.COFFEE{
-    color: #2F398E;
-
+  }
 }
 
-@media only screen and (max-width: 600px) {
-    body {
-      background-color: rgb(255, 255, 255);
-    }
-    .text-hover {
-        position: absolute;
-        
-        bottom: 20px;
-        left: -15%;
-        z-index: 10;
-        padding-top: 20px;
-        padding-bottom: 250px;
-       
-        text-align: center;
-    }
-    
-    #text-hover1{
-        font-family: 'Roboto Condensed', sans-serif;
-        letter-spacing: normal;
-        font-size: 20px;
-        color:#e02b20 ;
-        font-weight: 200;
-      
-    }
-  }
+#shopcoffee {
+  font-family: "Roboto Condensed", sans-serif;
+}
 
+h1 {
+  text-align: center;
+  color: red;
+  font-family: "Roboto Condensed", sans-serif;
+}
 
-
-  #shopcoffee{
-    font-family: 'Roboto Condensed', sans-serif;
- 
-  }
-
-  h1{
-      text-align: center;
-      color:red;
-      font-family: 'Roboto Condensed', sans-serif;
-
-  }
-  
-  .p{
-      text-align: center;
-  }
-
-
+.p {
+  text-align: center;
+}
 
 .card {
-    width: fit-content
+  width: fit-content;
 }
 
 .card-body {
-    width: fit-content
+  width: fit-content;
 }
 
-
-
 .img-thumbnail {
-    border: 1px solid #ffffff;
+  border: 1px solid #ffffff;
 }
 
 .card {
-    box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
-    border-radius: 5px;
-    padding-bottom: 10px
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding-bottom: 10px;
 }
 
 .card-title {
-    font-size: 14px;
-    font-weight: 900
+  font-size: 14px;
+  font-weight: 900;
 }
 
 .card-text {
-    font-size: 14px;
-    font-family: sans-serif;
-    font-weight: 500
+  font-size: 14px;
+  font-family: sans-serif;
+  font-weight: 500;
 }
 
-img, #images {
-    background-color: rgba(84,84,84,.29);
-   
+img,
+#images {
+  background-color: rgba(84, 84, 84, 0.29);
 }
 
-h5{
-    font-size: 60px;
-    line-height: 1.5;
-    letter-spacing: .015cm;
-    position: relative;
-    font-family: 'Roboto Condensed', sans-serif;
-    white-space:nowrap;
-    
-
-    
+h5 {
+  font-size: 60px;
+  line-height: 1.5;
+  letter-spacing: 0.015cm;
+  position: relative;
+  font-family: "Roboto Condensed", sans-serif;
+  white-space: nowrap;
 }
 
-h3{
-    font-family: 'Roboto Condensed', sans-serif;
-
+h3 {
+  font-family: "Roboto Condensed", sans-serif;
 }
 
-.carousel-caption{
-    display: flex;
-    justify-content: center;
-    top: 40%;
+.carousel-caption {
+  display: flex;
+  justify-content: center;
+  top: 40%;
 }
 
-.but{
-    background-color: transparent;
-    background-repeat: no-repeat;
-    border: 1px solid white;
-    outline: none;
-    
+.but {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: 1px solid white;
+  outline: none;
 }
 
-p{
-    font-family: 'Roboto Condensed', sans-serif;
-  
+p {
+  font-family: "Roboto Condensed", sans-serif;
 }
-
 
 #wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    
-  }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}

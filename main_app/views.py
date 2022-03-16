@@ -81,7 +81,7 @@ def shoppingcarts_update(request):
 
 def products_index(request):
     products = Product.objects.all()
-    return render(request, 'products.html', {
+    return render(request, 'products/index.html', {
         'products': products
     })
 
