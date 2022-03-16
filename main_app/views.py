@@ -7,12 +7,15 @@ from django.contrib.auth import login
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from .forms import LoginForm, UpdateForm, SignupForm
-from .models import *
+from .models import Product
 
 
 # Create your views here.
 def home(request):
-    return render(request, 'home.html')
+    products = Product.objects.all()
+    return render(request, 'home.html', {
+        'products': products
+    })
 
 def about(request):
     return render(request, 'about.html')
@@ -66,11 +69,6 @@ def shoppingcarts_update(request):
     request.session['shoppingcarts_index'] = shoppingcart
     return redirect(reverse('shoppingcarts_index'))
 
-def products_index(request):
-    products = Product.objects.all()
-    return render(request, 'products.html', {
-        'products': products
-    })
 
 def products_detail(request, id):
     product = Product.objects.get(pk=id)
