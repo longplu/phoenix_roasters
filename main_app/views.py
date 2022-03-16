@@ -7,7 +7,7 @@ from django.contrib.auth import login
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from .forms import LoginForm, UpdateForm, SignupForm
-from .models import Product
+from .models import *
 
 
 # Create your views here.
