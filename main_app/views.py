@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse
+from statistics import quantiles
+from django.shortcuts import get_object_or_404, render, redirect, reverse
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.detail import DetailView
 from django.contrib import messages
@@ -6,7 +7,8 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
-from .forms import LoginForm, UpdateForm, SignupForm
+import datetime
+from .forms import *
 from .models import *
 
 
@@ -77,11 +79,41 @@ def shoppingcarts_update(request):
     return redirect(reverse('shoppingcarts_index'))
 
 
+def products_index(request):
+    products = Product.objects.all()
+    return render(request, 'products.html', {
+        'products': products
+    })
+
 def products_detail(request, id):
     product = Product.objects.get(pk=id)
     return render(request, 'products/detail.html', {
         'product': product,
     })
+
+@login_required()
+def checkouts_index(request):
+    if request.method == "POST":
+        order_form = OrderForm(request.POST)
+
+        if order_form.is_valid:
+            order = order_form.save(commit=False)
+            order.user = request.user
+            order.date = datetime.now()
+            order.save()
+
+            shoppingcart = request.session.get('shoppingcarts_index', {})
+            total = 0
+            for id, quantity in shoppingcart.items():
+                product = get_object_or_404(Product, pk=id)
+                total += quantity * product.price
+                cart_order = CartOrder(
+                    order=order,
+                    product=product,
+                    quantity=quantity,
+                )
+                cart_order.save()
+
 
 """"""""""""""""""""""""""
 
