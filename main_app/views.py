@@ -43,7 +43,14 @@ def signup(request):
 
 
 def shoppingcarts_index(request):
-    return render(request, 'shoppingcarts/index.html')
+    if request.user.is_authenticated:
+        user=request.user
+        order, created = Order.objects.get_or_create(user=user, complete=False)
+        products = order.cartorder_set.all()
+    else:
+        products = []
+    context = {'products': products}
+    return render(request, 'shoppingcarts/index.html', context)
 
 def shoppingcarts_add(request):
     quantity = int(request.POST.get('quantity'))
