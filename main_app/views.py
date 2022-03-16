@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse
+from statistics import quantiles
+from django.shortcuts import get_object_or_404, render, redirect, reverse
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.detail import DetailView
 from django.contrib import messages
@@ -6,13 +7,17 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
-from .forms import LoginForm, UpdateForm, SignupForm
+import datetime
+from .forms import *
 from .models import *
 
 
 # Create your views here.
 def home(request):
-    return render(request, 'home.html')
+    products = Product.objects.all()
+    return render(request, 'home.html', {
+        'products': products
+    })
 
 def about(request):
     return render(request, 'about.html')
@@ -43,7 +48,14 @@ def signup(request):
 
 
 def shoppingcarts_index(request):
-    return render(request, 'shoppingcarts/index.html')
+    if request.user.is_authenticated:
+        user=request.user
+        order, created = Order.objects.get_or_create(user=user, complete=False)
+        products = order.cartorder_set.all()
+    else:
+        products = []
+    context = {'products': products}
+    return render(request, 'shoppingcarts/index.html', context)
 
 def shoppingcarts_add(request):
     quantity = int(request.POST.get('quantity'))
@@ -66,6 +78,7 @@ def shoppingcarts_update(request):
     request.session['shoppingcarts_index'] = shoppingcart
     return redirect(reverse('shoppingcarts_index'))
 
+
 def products_index(request):
     products = Product.objects.all()
     return render(request, 'products.html', {
@@ -77,6 +90,30 @@ def products_detail(request, id):
     return render(request, 'products/detail.html', {
         'product': product,
     })
+
+@login_required()
+def checkouts_index(request):
+    if request.method == "POST":
+        order_form = OrderForm(request.POST)
+
+        if order_form.is_valid:
+            order = order_form.save(commit=False)
+            order.user = request.user
+            order.date = datetime.now()
+            order.save()
+
+            shoppingcart = request.session.get('shoppingcarts_index', {})
+            total = 0
+            for id, quantity in shoppingcart.items():
+                product = get_object_or_404(Product, pk=id)
+                total += quantity * product.price
+                cart_order = CartOrder(
+                    order=order,
+                    product=product,
+                    quantity=quantity,
+                )
+                cart_order.save()
+
 
 """"""""""""""""""""""""""
 
