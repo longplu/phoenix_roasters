@@ -45,6 +45,12 @@ $border-radius: 6px;
   }
 }
 
+.img_responsive {
+  display: block;
+  max-width: 100%;
+  margin: auto;
+}
+
 a {
   transition: $fast-transition;
 }
