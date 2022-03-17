@@ -1,5 +1,15 @@
-// attempting to use breakpoints
+// colors
+$primary-color: #808080;
+$secondary-color: #a7daf1;
+$third-color: #e29999;
+$white-color: #ffffff;
+$off-white-color: #f2f2f2;
+$black-color: #000;
+$required-color: #ff0000;
+$error-color: #cc0b0b;
+$success-color: #1dce26;
 
+// attempting to use breakpoints
 @mixin breakpoint($class) {
   @if $class == xs {
     @media (max-width: 767px) {
@@ -33,19 +43,19 @@
 
   &_main__link {
     text-decoration: none;
-    color: #000000;
+    color: $black-color;
 
     &:hover {
-      color: #000000;
+      color: $black-color;
       h3 {
-        color: #0000ff;
+        color: $primary-color;
       }
     }
   }
 
   &_wrapper {
     border-radius: $default-border-radius;
-    box-shadow: $panel-shadow;
+    box-shadow: $pan-shadow;
 
     &__img {
       > img {
