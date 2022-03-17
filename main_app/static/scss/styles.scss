@@ -21,3 +21,54 @@
     @warn "Breakpoint mixin supports: xs, sm, md, lg";
   }
 }
+
+.products {
+  text-align: center;
+  display: flex;
+  margin: 15px 0;
+
+  @include breakpoint(xs) {
+    margin-bottom: 15px;
+  }
+
+  &_main__link {
+    text-decoration: none;
+    color: #000000;
+
+    &:hover {
+      color: #000000;
+      h3 {
+        color: #0000ff;
+      }
+    }
+  }
+
+  &_wrapper {
+    border-radius: $default-border-radius;
+    box-shadow: $panel-shadow;
+
+    &__img {
+      > img {
+        border-radius: $default-border-radius;
+      }
+    }
+
+    &__title {
+      transition: $fast-transition;
+      background: $secondary-color;
+      color: $white-color;
+      padding: 10px;
+      text-shadow: $text-shadow;
+    }
+
+    &__content {
+      &__text {
+        padding: 10px;
+      }
+
+      &__price {
+        padding-bottom: 20px;
+      }
+    }
+  }
+}
