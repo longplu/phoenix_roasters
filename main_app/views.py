@@ -1,5 +1,6 @@
 from statistics import quantiles
 from django.shortcuts import get_object_or_404, render, redirect, reverse
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.detail import DetailView
 from django.contrib import messages
