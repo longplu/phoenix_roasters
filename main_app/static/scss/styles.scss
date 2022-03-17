@@ -5,9 +5,6 @@ $third-color: #e29999;
 $white-color: #ffffff;
 $off-white-color: #f2f2f2;
 $black-color: #000;
-$required-color: #ff0000;
-$error-color: #cc0b0b;
-$success-color: #1dce26;
 
 // some layout-color
 $txt-on-white: #61abf0;
@@ -21,6 +18,9 @@ $txt-shadow: 0.5px 0.5px 1px #0000004d;
 // transition
 $fast-transtion: 0.3s all ease-in-out;
 $slow-transition: 0.8s all ease-in-out;
+
+// bordering
+$border-radius: 6px;
 
 // attempting to use breakpoints
 @mixin breakpoint($class) {
@@ -67,12 +67,12 @@ $slow-transition: 0.8s all ease-in-out;
   }
 
   &_wrapper {
-    border-radius: $default-border-radius;
+    border-radius: $border-radius;
     box-shadow: $pan-shadow;
 
     &__img {
       > img {
-        border-radius: $default-border-radius;
+        border-radius: $border-radius;
       }
     }
 
