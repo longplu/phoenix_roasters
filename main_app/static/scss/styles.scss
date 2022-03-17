@@ -9,6 +9,11 @@ $required-color: #ff0000;
 $error-color: #cc0b0b;
 $success-color: #1dce26;
 
+// some layout-color
+$txt-on-white: #61abf0;
+$main-background: $white-color;
+$main-panel: darken($off-white-color, 5%);
+
 // attempting to use breakpoints
 @mixin breakpoint($class) {
   @if $class == xs {
