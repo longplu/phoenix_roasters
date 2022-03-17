@@ -1,4 +1,3 @@
-from statistics import quantiles
 from django.shortcuts import get_object_or_404, render, redirect, reverse
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
@@ -82,6 +81,14 @@ def shoppingcarts_update(request):
 
 def products_index(request):
     products = Product.objects.all()
+    paginator = Paginator(products, 6)
+    page = request.GET.get('page')
+    try:
+        products = paginator.page(page)
+    except PageNotAnInteger:
+        products = paginator.page(1)
+    except EmptyPage:
+        products = paginator.page(paginator.num_pages)
     return render(request, 'products/index.html', {
         'products': products
     })
