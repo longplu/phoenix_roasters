@@ -5,21 +5,14 @@ $third-color: #e29999;
 $white-color: #ffffff;
 $off-white-color: #f2f2f2;
 $black-color: #000;
-
-// some layout-color
 $txt-white: #61abf0;
-$main-bg: $white-color;
 $main-panel: darken($off-white-color, 5%);
 
-// shadowing
+// util
 $pan-shadow: 1px 1px 2px #00000080;
 $txt-shadow: 0.5px 0.5px 1px #0000004d;
-
-// transition
 $fast-transition: 0.3s all ease-in-out;
 $slow-transition: 0.8s all ease-in-out;
-
-// bordering
 $border-radius: 6px;
 
 // attempting to use breakpoints
