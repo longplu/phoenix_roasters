@@ -4,14 +4,14 @@
     <span
       ><a
         aria-label="previous page"
-        href="?page={{products.previous_pgae_number}}"
+        href="?page={{products.previous_page_number}}"
         ><i class="pags pag_left"></i></a
     ></span>
     {% endif %}
     <span class="pagination_links__current"
       >Page {{products.number}} of {{products.paginator.num_pages}}</span
     >
-    {% if prof=ducts.has_next %}
+    {% if products.has_next %}
     <span
       ><a aria-label="next page" href="?page={{products.next_page_number}}"
         ><i class="pags pag-right"></i></a
