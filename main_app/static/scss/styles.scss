@@ -7,12 +7,12 @@ $off-white-color: #f2f2f2;
 $black-color: #000;
 
 // some layout-color
-$txt-on-white: #61abf0;
-$main-background: $white-color;
+$txt-white: #61abf0;
+$main-bg: $white-color;
 $main-panel: darken($off-white-color, 5%);
 
 // shadowing
-$panel-shadow: 1px 1px 2px #00000080;
+$pan-shadow: 1px 1px 2px #00000080;
 $txt-shadow: 0.5px 0.5px 1px #0000004d;
 
 // transition
@@ -59,13 +59,13 @@ a {
   margin: auto;
   display: block;
   text-align: center;
-  padding: 25px;
+  padding: 20px;
 
   span {
     background-color: $primary-color;
     padding: 10px 15px;
     border-radius: $border-radius;
-    box-shadow: $panel-shadow;
+    box-shadow: $pan-shadow;
 
     a {
       &:hover {
@@ -84,13 +84,13 @@ a {
 .products {
   text-align: center;
   display: flex;
-  margin: 15px 0;
+  margin: 14px 0;
 
   @include breakpoint(xs) {
-    margin-bottom: 15px;
+    margin-bottom: 14px;
   }
 
-  &_main__link {
+  &_link {
     text-decoration: none;
     color: $black-color;
 

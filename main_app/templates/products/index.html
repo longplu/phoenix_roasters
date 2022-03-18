@@ -5,11 +5,11 @@
     <div class="col-md-4 col-12 flex">
       <div class="products">
         <div class="products_wrapper">
-          <a aria-label="View Product Detail" class="products_main__link" href=""{% url 'detail' product.id %}>
+          <a aria-label="View Product Detail" class="products_link" href=""{% url 'detail' product.id %}>
             <div class="products_wrapper__img">
               <img class="img_responsive" src="{{product.image_url}}" alt="{{product.name}}">
             </div>
-            <h4 class="products_wrapper__title">{{product.name}}</h4>
+            <h4 class="products_wrapper__name">{{product.name}}</h4>
           </a>
           <div class="products_wrapper__content">
             <div class="products_wrapper__content__text">
