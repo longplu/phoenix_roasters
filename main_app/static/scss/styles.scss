@@ -66,6 +66,18 @@ a {
     padding: 10px 15px;
     border-radius: $border-radius;
     box-shadow: $panel-shadow;
+
+    a {
+      &:hover {
+        i {
+          color: lighten($black-color, 45%);
+        }
+      }
+    }
+
+    i {
+      color: $black-color;
+    }
   }
 }
 

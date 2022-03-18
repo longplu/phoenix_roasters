@@ -1,0 +1,27 @@
+{% extends 'base.html' %}{% block content %}
+<div class="product">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <div class="product_img">
+          <img
+            src="{{product.image_url"
+            alt="{{product.name}}"
+            class="img_responsive"
+          />
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12 align align_center">
+        <div class="product_content">
+          <h1 class="product_content__title">{{product.name}}</h1>
+          <p class="product_content__description" id="description">
+            <span class="product_content__header">Description: </span
+            >{{product.description}}
+          </p>
+          <p class="product_content__price">>${{product.price}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

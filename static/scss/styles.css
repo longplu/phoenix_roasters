@@ -12,10 +12,14 @@ a {
   text-align: center;
   padding: 25px; }
   .pagination span {
-    background-color: #808080;
+    background-color: #3172fd;
     padding: 10px 15px;
     border-radius: 6px;
     box-shadow: 1px 1px 2px #00000080; }
+    .pagination span a:hover i {
+      color: #737373; }
+    .pagination span i {
+      color: #000; }
 
 .products {
   text-align: center;
@@ -30,7 +34,7 @@ a {
     .products_main__link:hover {
       color: #000; }
       .products_main__link:hover h3 {
-        color: #808080; }
+        color: #3172fd; }
   .products_wrapper {
     border-radius: 6px;
     box-shadow: 1px 1px 2px #00000080; }

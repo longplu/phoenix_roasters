@@ -1,21 +1,21 @@
 {% block content%}
 <div class="pagination">
-  <div class="pagination_links">
+  <div class="pagination__links">
     {% if products.has_previous %}
     <span
       ><a
         aria-label="previous page"
-        href="?page={{products.previous_page_number}}"
-        ><i class="pags pag_left"></i></a
+        href="?page={{ products.previous_page_number }}"
+        ><i class="fas fa-chevron-left"></i></a
     ></span>
     {% endif %}
-    <span class="pagination_links__current"
+    <span class="pagination__links__current"
       >Page {{products.number}} of {{products.paginator.num_pages}}</span
     >
     {% if products.has_next %}
     <span
-      ><a aria-label="next page" href="?page={{products.next_page_number}}"
-        ><i class="pags pag-right"></i></a
+      ><a aria-label="next page" href="?page={{ products.next_page_number }}"
+        ><i class="fas fa-chevron-right"></i></a
     ></span>
     {% endif %}
   </div>
