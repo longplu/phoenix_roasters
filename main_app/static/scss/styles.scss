@@ -103,8 +103,8 @@ a {
   }
 
   &_wrapper {
+    box-shadow: $pan-shadow;
     border-radius: $border-radius;
-    box-shadow: $panel-shadow;
 
     &__img {
       > img {
@@ -112,17 +112,17 @@ a {
       }
     }
 
-    &__title {
+    &__name {
       transition: $fast-transition;
       background: $secondary-color;
       color: $white-color;
-      padding: 10px;
+      padding: 12px;
       text-shadow: $txt-shadow;
     }
 
     &__content {
       &__text {
-        padding: 10px;
+        padding: 12px;
       }
 
       &__price {
@@ -135,7 +135,7 @@ a {
 .product {
   &_image {
     border-radius: $border-radius;
-    box-shadow: $panel-shadow;
+    box-shadow: $pan-shadow;
 
     img {
       border-radius: $border-radius;
