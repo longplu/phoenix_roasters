@@ -39,9 +39,9 @@ $border-radius: 6px;
 }
 
 .img_responsive {
-  display: block;
   max-width: 100%;
   margin: auto;
+  display: block;
 }
 
 a {
@@ -50,15 +50,15 @@ a {
 
 .pagination {
   margin: auto;
-  display: block;
   text-align: center;
   padding: 20px;
+  display: block;
 
   span {
-    background-color: $primary-color;
-    padding: 10px 15px;
     border-radius: $border-radius;
+    background-color: $primary-color;
     box-shadow: $pan-shadow;
+    padding: 10px 15px;
 
     a {
       &:hover {
@@ -75,8 +75,8 @@ a {
 }
 
 .products {
-  text-align: center;
   display: flex;
+  text-align: center;
   margin: 14px 0;
 
   @include breakpoint(xs) {
@@ -84,8 +84,8 @@ a {
   }
 
   &_link {
-    text-decoration: none;
     color: $black-color;
+    text-decoration: none;
 
     &:hover {
       color: $black-color;
@@ -96,8 +96,8 @@ a {
   }
 
   &_wrapper {
-    box-shadow: $pan-shadow;
     border-radius: $border-radius;
+    box-shadow: $pan-shadow;
 
     &__img {
       > img {
@@ -107,9 +107,9 @@ a {
 
     &__name {
       transition: $fast-transition;
+      padding: 12px;
       background: $secondary-color;
       color: $white-color;
-      padding: 12px;
       text-shadow: $txt-shadow;
     }
 
@@ -127,8 +127,8 @@ a {
 
 .product {
   &_image {
-    border-radius: $border-radius;
     box-shadow: $pan-shadow;
+    border-radius: $border-radius;
 
     img {
       border-radius: $border-radius;
@@ -139,13 +139,13 @@ a {
     vertical-align: middle;
 
     @include breakpoint(sm) {
-      text-align: center;
       padding-top: 15px;
+      text-align: center;
     }
 
     p {
-      border-bottom: 1px solid #00000056;
       padding: 15px 0;
+      border-bottom: 1px solid #00000056;
 
       &:last-of-type {
         border-bottom: none;
@@ -155,6 +155,26 @@ a {
     &__price {
       color: rgb(54, 231, 38);
       font-size: 1.2rem;
+    }
+
+    &__add {
+      flex-wrap: nowrap;
+      display: flex;
+
+      @include breakpoint(xs) {
+        justify-content: center;
+      }
+
+      input {
+        border-radius: 5px 0 0 5px;
+        outline: none;
+        text-align: center;
+        border: 1px solid $secondary-color;
+      }
+
+      button {
+        border-radius: 0 5px 5px 0;
+      }
     }
   }
 }
