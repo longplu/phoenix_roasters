@@ -131,3 +131,37 @@ a {
     }
   }
 }
+
+.product {
+  &_image {
+    border-radius: $border-radius;
+    box-shadow: $panel-shadow;
+
+    img {
+      border-radius: $border-radius;
+    }
+  }
+
+  &_content {
+    vertical-align: middle;
+
+    @include breakpoint(sm) {
+      text-align: center;
+      padding-top: 15px;
+    }
+
+    p {
+      border-bottom: 1px solid #00000056;
+      padding: 15px 0;
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
+
+    &__price {
+      color: rgb(54, 231, 38);
+      font-size: 1.2rem;
+    }
+  }
+}
