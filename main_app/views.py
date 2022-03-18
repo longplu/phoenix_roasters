@@ -93,8 +93,8 @@ def products_index(request):
         'products': products
     })
 
-def products_detail(request, id):
-    product = Product.objects.get(pk=id)
+def products_detail(request, product_id):
+    product = Product.objects.get(id=product_id)
     return render(request, 'products/detail.html', {
         'product': product,
     })

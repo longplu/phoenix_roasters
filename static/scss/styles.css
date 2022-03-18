@@ -3,6 +3,11 @@
   margin: auto;
   display: block; }
 
+.ali {
+  display: flex; }
+  .ali_cnt {
+    align-items: center; }
+
 a {
   transition: 0.3s all ease-in-out; }
 

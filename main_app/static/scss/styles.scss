@@ -44,6 +44,13 @@ $border-radius: 6px;
   display: block;
 }
 
+.ali {
+  display: flex;
+  &_cnt {
+    align-items: center;
+  }
+}
+
 a {
   transition: $fast-transition;
 }
