@@ -16,11 +16,32 @@ a {
   text-align: center;
   padding: 20px;
   display: block; }
-  .pagination span {
-    border-radius: 6px;
-    background-color: #3172fd;
-    box-shadow: 1px 1px 2px #00000080;
+  .pagination_circles {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; }
+  .pagination_links__current {
     padding: 10px 15px; }
+  .pagination label {
+    width: 35px;
+    height: 35px;
+    margin: 5px 10px;
+    color: #ffffff;
+    text-align: center;
+    border: 1px solid #ffffff;
+    transition: 0.3s all ease-in-out;
+    line-height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    font-weight: bold; }
+    .pagination label:hover {
+      background: #a7daf1; }
+  .pagination span {
+    border-radius: 4px;
+    background-color: #68686885;
+    box-shadow: 1px 1px 2px #00000080; }
     .pagination span a:hover i {
       color: #737373; }
     .pagination span i {
@@ -39,7 +60,7 @@ a {
     .products_link:hover {
       color: #000; }
       .products_link:hover h3 {
-        color: #3172fd; }
+        color: #68686885; }
   .products_wrapper {
     border-radius: 6px;
     box-shadow: 1px 1px 2px #00000080; }

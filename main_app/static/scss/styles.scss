@@ -1,5 +1,5 @@
 // colors
-$primary-color: #3172fd;
+$primary-color: #68686885;
 $secondary-color: #a7daf1;
 $third-color: #e29999;
 $white-color: #ffffff;
@@ -60,12 +60,45 @@ a {
   text-align: center;
   padding: 20px;
   display: block;
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+
+  &_circles {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &_links__current {
+    padding: 10px 15px;
+  }
+
+  label {
+    width: 35px;
+    height: 35px;
+    margin: 5px 10px;
+    color: $white-color;
+    text-align: center;
+    border: 1px solid $white-color;
+    transition: $fast-transition;
+    line-height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    font-weight: bold;
+
+    &:hover {
+      background: $secondary-color;
+    }
+  }
 
   span {
-    border-radius: $border-radius;
+    border-radius: 4px;
     background-color: $primary-color;
     box-shadow: $pan-shadow;
-    padding: 10px 15px;
 
     a {
       &:hover {
