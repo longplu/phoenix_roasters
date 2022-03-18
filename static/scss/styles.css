@@ -6,6 +6,17 @@
 a {
   transition: 0.3s all ease-in-out; }
 
+.pagination {
+  margin: auto;
+  display: block;
+  text-align: center;
+  padding: 25px; }
+  .pagination span {
+    background-color: #808080;
+    padding: 10px 15px;
+    border-radius: 6px;
+    box-shadow: 1px 1px 2px #00000080; }
+
 .products {
   text-align: center;
   display: flex;

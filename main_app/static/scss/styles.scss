@@ -1,5 +1,5 @@
 // colors
-$primary-color: #808080;
+$primary-color: #3172fd;
 $secondary-color: #a7daf1;
 $third-color: #e29999;
 $white-color: #ffffff;
@@ -53,6 +53,20 @@ $border-radius: 6px;
 
 a {
   transition: $fast-transition;
+}
+
+.pagination {
+  margin: auto;
+  display: block;
+  text-align: center;
+  padding: 25px;
+
+  span {
+    background-color: $primary-color;
+    padding: 10px 15px;
+    border-radius: $border-radius;
+    box-shadow: $panel-shadow;
+  }
 }
 
 .products {
