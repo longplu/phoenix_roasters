@@ -1,17 +1,59 @@
 {% extends 'base.html' %} 
 
+{% load static %}
+
 {% block content %}
 
-{% load crispy_forms_tags %}
 
-<div class="container py-5">
-	<h1>Login</h1>
-	<form method="POST">
-		{% csrf_token %}
-		{{ LoginForm|crispy }}                    
-		<button class="btn btn-primary" type="submit">Sign up</button>
-	</form>
-	<p class="text-center">If you already have an account, <a href="/login">login</a> instead.</p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <section class="myform-area">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="form-area login-form">
+                    <div class="form-content">
+                        <h2>Login</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non aperiam cum quas quod reprehenderit.</p>
+                        <ul>
+                            <li><a href="#" class="facebook"><i class="fa fa-facebook-f"></i><span>facebook</span></a></li>
+                            <li><a href="#" class="twitter"><i class="fa fa-twitter"></i><span>twitter</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="form-input">
+                        <h2>Login Form</h2>
+                        <form method="POST">
+                          {% csrf_token %}
+                          {{ LoginForm }}                    
+                            <div class="form-group">
+                                <input type="text"  id="" name="name" required>
+                                <label>User Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" id="" name="password" required>
+                                <label>password</label>
+                            </div>
+                            <div class="myform-button">
+                                <button class="myform-btn">Login</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
+
 
 {% endblock %}
+
+
