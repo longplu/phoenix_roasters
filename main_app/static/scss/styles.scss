@@ -219,3 +219,23 @@ a {
     }
   }
 }
+
+.button {
+  border-radius: $border-radius;
+  transition: $fast-transition;
+  padding: 10px 20px;
+
+  &:hover {
+    transform: scale(0.95);
+  }
+
+  &_prim {
+    background-color: $primary-color;
+    color: $black-color;
+
+    &:hover {
+      background: darken($primary-color, 15%);
+      color: lighten($black-color, 15%);
+    }
+  }
+}

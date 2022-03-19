@@ -111,4 +111,17 @@ a {
     .product_content__add button {
       border-radius: 0 5px 5px 0; }
 
+.button {
+  border-radius: 6px;
+  transition: 0.3s all ease-in-out;
+  padding: 10px 20px; }
+  .button:hover {
+    transform: scale(0.95); }
+  .button_prim {
+    background-color: #68686885;
+    color: #000; }
+    .button_prim:hover {
+      background: rgba(66, 66, 66, 0.521569);
+      color: #262626; }
+
 /*# sourceMappingURL=styles.css.map */
