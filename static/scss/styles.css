@@ -57,8 +57,8 @@ a {
     color: #000;
     text-decoration: none; }
     .products_link:hover {
-      color: #000; }
-      .products_link:hover h3 {
+      text-decoration: none; }
+      .products_link:hover h4 {
         color: #68686885; }
   .products_wrapper {
     border-radius: 6px;
