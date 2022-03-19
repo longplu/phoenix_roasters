@@ -80,9 +80,9 @@ a {
     width: 35px;
     height: 35px;
     margin: 5px 10px;
-    color: $white-color;
+    color: $black-color;
     text-align: center;
-    border: 1px solid $white-color;
+    border: 1px solid $secondary-color;
     transition: $fast-transition;
     line-height: 35px;
     border-radius: 50%;
@@ -97,8 +97,8 @@ a {
 
   span {
     border-radius: 4px;
-    background-color: $primary-color;
-    box-shadow: $pan-shadow;
+    background-color: $white-color;
+    // box-shadow: $pan-shadow;
 
     a {
       &:hover {

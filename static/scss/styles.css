@@ -27,9 +27,9 @@ a {
     width: 35px;
     height: 35px;
     margin: 5px 10px;
-    color: #ffffff;
+    color: #000;
     text-align: center;
-    border: 1px solid #ffffff;
+    border: 1px solid #a7daf1;
     transition: 0.3s all ease-in-out;
     line-height: 35px;
     border-radius: 50%;
@@ -40,8 +40,7 @@ a {
       background: #a7daf1; }
   .pagination span {
     border-radius: 4px;
-    background-color: #68686885;
-    box-shadow: 1px 1px 2px #00000080; }
+    background-color: #ffffff; }
     .pagination span a:hover i {
       color: #737373; }
     .pagination span i {
