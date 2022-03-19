@@ -83,14 +83,15 @@ a {
     border-radius: 6px; }
 
 .product_content {
-  vertical-align: middle; }
+  vertical-align: middle;
+  max-width: 100%; }
   @media (max-width: 768px) {
     .product_content {
       padding-top: 15px;
       text-align: center; } }
   .product_content p {
     padding: 15px 0;
-    border-bottom: 1px solid #00000056; }
+    border-bottom: 1px solid #737373; }
     .product_content p:last-of-type {
       border-bottom: none; }
   .product_content__price {

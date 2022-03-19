@@ -177,6 +177,7 @@ a {
 
   &_content {
     vertical-align: middle;
+    max-width: 100%;
 
     @include breakpoint(sm) {
       padding-top: 15px;
@@ -185,7 +186,7 @@ a {
 
     p {
       padding: 15px 0;
-      border-bottom: 1px solid #00000056;
+      border-bottom: 1px solid lighten($black-color, 45%);
 
       &:last-of-type {
         border-bottom: none;
@@ -193,7 +194,7 @@ a {
     }
 
     &__price {
-      color: rgb(54, 231, 38);
+      color: #36e726;
       font-size: 1.2rem;
     }
 
