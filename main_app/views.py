@@ -2,6 +2,7 @@ from statistics import quantiles
 from django.shortcuts import get_object_or_404, render, redirect, reverse
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.detail import DetailView
+from django.views.generic.list import ListView
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
@@ -71,6 +72,29 @@ def shoppingcarts_add(request):
     request.session['shoppingcarts_index'] = shoppingcart
     return redirect(reverse('shoppingcarts_index'))
 
+
+def shoppingcarts_delete(request, id):
+    """
+    Adjust the quantity of the specified product to the specified
+    amount
+
+    url for this function should be <str:id> not <int:id>
+    - otherwise you need to add str() method for each dict representation.
+    """
+    shoppingcart = request.session.get('shoppingcart', {})
+    quantity = shoppingcart[id] - 1 #decreases the cart quantity until deletes from cart
+
+    if quantity > 0:
+        shoppingcart[id] = quantity
+    else:
+        shoppingcart.pop(id)
+    request.session['shoppingcart'] = shoppingcart
+
+
+
+
+
+
 def shoppingcarts_update(request):
     quantity = int(request.POST.get('quantity'))
     shoppingcart = request.session.get('shoppingcarts_index', {})
@@ -129,6 +153,7 @@ class ProductUpdate(UpdateView):
 
 class ProductDelete(DeleteView):
     pass
-
-
-    
+class IndexView(ListView):
+    template_name = 'shoppingcarts/index.html'
+    context_object_name = 'product'
+    queryset = Product.objects.all().prefetch_related('shoppingcarts_set.all') 
