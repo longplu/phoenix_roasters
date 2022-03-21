@@ -8,8 +8,8 @@
 a, .nav-link {
     color: #2F398E;
     font: 12px ;
-    font-weight: 700;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 500;
+    font-family: 'Oleo Script', cursive;
 
 
     
@@ -35,15 +35,15 @@ nav {
 
 #login{
     border: 1px solid red;
-   
+    border-radius: 5%;
     font-family: 'Roboto Condensed', sans-serif;
 
 }
 
 #signup{
     background-color: #e02b20;
-    border: 2px solid #2F398E;
-   
+    border: 1px solid #2F398E;
+    border-radius: 5%;
     font-family: 'Roboto Condensed', sans-serif;
     float: left;
     margin-left: 10px;
@@ -52,7 +52,9 @@ nav {
 
 .navbar-brand{
     
-    font-family: 'Roboto Condensed', sans-serif;
+    font: 12px ;
+    font-weight: 200;
+    font-family: 'Oleo Script', cursive;
 }
 
 .navbar-toggler{
@@ -164,20 +166,24 @@ nav {
 
 img, #images {
     background-color: rgba(84,84,84,.29);
+ 
    
 }
 
 h5{
-    font-size: 60px;
+    font-size: 40px;
     line-height: 1.5;
     letter-spacing: .015cm;
     position: relative;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 100;
+    font-family: 'Oleo Script', cursive;    
     white-space:nowrap;
-    
+    text-decoration: underline;    
+    text-decoration-thickness: 2px;
 
-    
 }
+
+
 
 h3{
     font-family: 'Roboto Condensed', sans-serif;
@@ -195,6 +201,9 @@ h3{
     background-repeat: no-repeat;
     border: 1px solid white;
     outline: none;
+    font-size: small;
+    font-family: 'Oleo Script', cursive;  
+    
     
 }
 
@@ -214,3 +223,8 @@ p{
     background-image: url("../img/jumbotron_bg.jpg");
     background-size: cover;
   }
+
+ #carousel2{
+     text-align: right;
+
+ }

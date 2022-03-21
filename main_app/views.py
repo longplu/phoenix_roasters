@@ -1,5 +1,5 @@
-from statistics import quantiles
 from django.shortcuts import get_object_or_404, render, redirect, reverse
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
@@ -72,15 +72,15 @@ def shoppingcarts_add(request):
     request.session['shoppingcarts_index'] = shoppingcart
     return redirect(reverse('shoppingcarts_index'))
 
-
-def shoppingcarts_delete(request, id):
     """
+def shoppingcarts_delete(request, id):
+   
     Adjust the quantity of the specified product to the specified
     amount
 
     url for this function should be <str:id> not <int:id>
     - otherwise you need to add str() method for each dict representation.
-    """
+    
     shoppingcart = request.session.get('shoppingcart', {})
     quantity = shoppingcart[id] - 1 #decreases the cart quantity until deletes from cart
 
@@ -90,7 +90,7 @@ def shoppingcarts_delete(request, id):
         shoppingcart.pop(id)
     request.session['shoppingcart'] = shoppingcart
 
-
+    """
 
 
 
@@ -109,12 +109,20 @@ def shoppingcarts_update(request):
 
 def products_index(request):
     products = Product.objects.all()
-    return render(request, 'products.html', {
+    paginator = Paginator(products, 6)
+    page = request.GET.get('page')
+    try:
+        products = paginator.page(page)
+    except PageNotAnInteger:
+        products = paginator.page(1)
+    except EmptyPage:
+        products = paginator.page(paginator.num_pages)
+    return render(request, 'products/index.html', {
         'products': products
     })
 
-def products_detail(request, id):
-    product = Product.objects.get(pk=id)
+def products_detail(request, product_id):
+    product = Product.objects.get(id=product_id)
     return render(request, 'products/detail.html', {
         'product': product,
     })
@@ -156,4 +164,8 @@ class ProductDelete(DeleteView):
 class IndexView(ListView):
     template_name = 'shoppingcarts/index.html'
     context_object_name = 'product'
-    queryset = Product.objects.all().prefetch_related('shoppingcarts_set.all') 
+    queryset = Product.objects.all().prefetch_related('shoppingcarts_set.all')
+    
+class ShoppingcartsDelete(DeleteView):
+  model = CartOrder
+  success_url = '/shoppingcarts/'

@@ -1,0 +1,23 @@
+{% block content%}
+<div class="pagination">
+  <div class="pagination_circles">
+    {% if products.has_previous %}
+    <span class="">
+      <a href="?page={{products.previous_page_number}}">
+        <label for=""><</label>
+      </a>
+    </span>
+    {% endif %}
+    <span class="pagination_links__current"
+      >Page {{products.number}} of {{products.paginator.num_pages}}</span
+    >
+    {% if products.has_next %}
+    <span class="">
+      <a href="?page={{ products.next_page_number }}">
+        <label for="">></label>
+      </a>
+    </span>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

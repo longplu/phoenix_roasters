@@ -8,18 +8,21 @@ urlpatterns = [
 	path('contactus/', views.contactus, name='contactus'),
 	path('location/', views.location, name='location'),
 	
-	#path('products/', views.products_index, name="index"),
+	path('products/', views.products_index, name="index"),
 	path('products/<int:product_id>/', views.products_detail, name="detail"),
 	path('products/create/', views.ProductCreate.as_view(), name='products_create'),
 	path('products/<int:pk>/update/', views.ProductUpdate.as_view(), name='products_update'),
-	path('products/<int:pk>/delete/', views.ProductDelete.as_view(), name='products_delete'),
+	#path('products/<int:pk>/delete/', views.ProductDelete.as_view(), name='products_delete'),
 
 	path('shoppingcarts/', views.shoppingcarts_index, name='shoppingcarts_index'),
 	path('shoppingcarts/add/<item_id>/', views.shoppingcarts_add, name='shoppingcarts_add'),
+	#path('shoppingcarts/<int:shoppingcarts_id>/', views.shoppingcarts_detail, name='detail'),
 
-	path('shoppingcarts/<str:id>/', views.shoppingcarts_delete, name="shoppingcarts_delete"),
+	path('shoppingcarts/delete/<item_id>/', views.ShoppingcartsDelete.as_view(), name='shoppingcarts_delete'),
 
-	path('shoppingcarts/update/<item_id>/', views.shoppingcarts_update, name='shoppingcarts_update'),
+#	path('shoppingcarts/<str:id>/', views.shoppingcarts_delete, name="shoppingcarts_delete"),
+
+	#path('shoppingcarts/update/<item_id>/', views.shoppingcarts_update, name='shoppingcarts_update'),
 
 	path('checkouts/', views.checkouts_index, name='checkouts_index'),
 
