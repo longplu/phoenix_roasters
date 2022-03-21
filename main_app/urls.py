@@ -15,8 +15,8 @@ urlpatterns = [
 	path('products/<int:pk>/delete/', views.ProductDelete.as_view(), name='products_delete'),
 
 	path('shoppingcarts/', views.shoppingcarts_index, name='shoppingcarts_index'),
-	path('shoppingcarts/add/<item_id>/', views.shoppingcarts_add, name='shoppingcarts_add'),
-	path('shoppingcarts/update/<item_id>/', views.shoppingcarts_update, name='shoppingcarts_update'),
+	path('shoppingcarts/add/<int:product_id>/', views.shoppingcarts_add, name='shoppingcarts_add'),
+	path('shoppingcarts/update/<int:product_id>/', views.shoppingcarts_update, name='shoppingcarts_update'),
 
 	path('checkouts/', views.checkouts_index, name='checkouts_index'),
 

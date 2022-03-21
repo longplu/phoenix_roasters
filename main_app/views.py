@@ -52,6 +52,7 @@ def signup(request):
 
 
 def shoppingcarts_index(request):
+    # return render(request, 'shoppingcarts/index.html')
     if request.user.is_authenticated:
         user=request.user
         order, created = Order.objects.get_or_create(user=user, complete=False)
@@ -65,7 +66,7 @@ def shoppingcarts_add(request):
     quantity = int(request.POST.get('quantity'))
     shoppingcart = request.session.get('shoppingcarts_index', {})
     if id in shoppingcart:
-        shoppingcart[id] = int(shoppingcart[id] + quantity)
+        shoppingcart[id] = int(shoppingcart[id]) + quantity
     else:
         shoppingcart[id] = shoppingcart.get(id, quantity)
     request.session['shoppingcarts_index'] = shoppingcart
