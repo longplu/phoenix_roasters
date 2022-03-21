@@ -317,6 +317,18 @@ a,a:hover{
     padding: 20px 0;
 }
 
+
+#wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+  }
+
+  .jumbotron {
+    background-image: url("../img/jumbotron_bg.jpg");
+    background-size: cover;
+  }
+
 .myform-area .form-area .form-input input,
 .myform-area .form-area .form-input textarea{
     text-transform: capitalize;
