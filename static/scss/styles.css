@@ -1,4 +1,4 @@
-.img_responsive {
+.img_resp {
   max-width: 100%;
   margin: auto;
   display: block; }
@@ -12,16 +12,17 @@ a {
   transition: 0.3s all ease-in-out; }
 
 .pagination {
+  display: block;
   margin: auto;
   text-align: center;
-  padding: 20px;
-  display: block; }
+  justify-content: center;
+  padding: 20px; }
   .pagination_circles {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center; }
-  .pagination_links__current {
+  .pagination_current {
     padding: 10px 15px; }
   .pagination label {
     width: 35px;
@@ -39,12 +40,8 @@ a {
     .pagination label:hover {
       background: #a7daf1; }
   .pagination span {
-    border-radius: 4px;
+    border-radius: 6px;
     background-color: #ffffff; }
-    .pagination span a:hover i {
-      color: #737373; }
-    .pagination span i {
-      color: #000; }
 
 .products {
   display: flex;
@@ -76,12 +73,17 @@ a {
     .products_wrapper__content__price {
       padding-bottom: 20px; }
 
-.product_image {
+.product_img {
   box-shadow: 1px 1px 2px #00000080;
   border-radius: 6px; }
+<<<<<<< HEAD
   .product_image img {
     border-radius: 6px;
     width: 10%; }
+=======
+  .product_img img {
+    border-radius: 6px; }
+>>>>>>> master
 
 .product_content {
   vertical-align: middle;
@@ -118,10 +120,10 @@ a {
   padding: 10px 20px; }
   .button:hover {
     transform: scale(0.95); }
-  .button_prim {
+  .button_add {
     background-color: #68686885;
     color: #000; }
-    .button_prim:hover {
+    .button_add:hover {
       background: rgba(66, 66, 66, 0.521569);
       color: #262626; }
 
