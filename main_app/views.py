@@ -1,5 +1,5 @@
-from statistics import quantiles
 from django.shortcuts import get_object_or_404, render, redirect, reverse
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.detail import DetailView
 from django.contrib import messages
@@ -7,8 +7,12 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
+
+from .forms import LoginForm, UpdateForm, SignupForm
+
 import datetime
 from .forms import *
+
 from .models import *
 
 
@@ -81,12 +85,20 @@ def shoppingcarts_update(request):
 
 def products_index(request):
     products = Product.objects.all()
-    return render(request, 'products.html', {
+    paginator = Paginator(products, 6)
+    page = request.GET.get('page')
+    try:
+        products = paginator.page(page)
+    except PageNotAnInteger:
+        products = paginator.page(1)
+    except EmptyPage:
+        products = paginator.page(paginator.num_pages)
+    return render(request, 'products/index.html', {
         'products': products
     })
 
-def products_detail(request, id):
-    product = Product.objects.get(pk=id)
+def products_detail(request, product_id):
+    product = Product.objects.get(id=product_id)
     return render(request, 'products/detail.html', {
         'product': product,
     })
