@@ -176,7 +176,6 @@ p {
 }
 
 #wrapper {
-<<<<<<< HEAD
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     
@@ -371,8 +370,6 @@ a,a:hover{
 .myform-area .form-area .myform-button .myform-btn:hover{
     background: #07315B;
 }
-=======
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
->>>>>>> master
