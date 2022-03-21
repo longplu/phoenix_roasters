@@ -169,9 +169,11 @@ a {
   &_image {
     box-shadow: $pan-shadow;
     border-radius: $border-radius;
+  
 
     img {
       border-radius: $border-radius;
+      width: 10%;
     }
   }
 
@@ -184,7 +186,7 @@ a {
       text-align: center;
     }
 
-    p {
+    p { 
       padding: 15px 0;
       border-bottom: 1px solid lighten($black-color, 45%);
 
