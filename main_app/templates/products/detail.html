@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="product">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <div class="product_img">
+          <img
+            src="{{product.image_url}}"
+            alt="{{product.name}}"
+            class="img_resp"
+          />
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12 ali ali_cnt">
+        <div class="product_content">
+          <h1 class="product_content__name">{{product.name}}</h1>
+          <p class="product_content__description" id="description">
+            <span class="product_content__title">Description: </span
+            >{{product.description}}
+          </p>
+          <p class="product_content__price">${{product.price}}</p>
+          <form
+            id="shoppingcarts_form"
+            method="POST"
+            action="{% url 'shoppingcarts_add' product.id %}"
+          >
+            {% csrf_token %}
+            <div class="product_content__add">
+              <input
+                type="number"
+                name="qunatity"
+                value="1"
+                min="1"
+                max="10"
+                placeholder="Quantity"
+              />
+              <button id="shoppingcarts_add" class="button button_add" type="submit">Add to Cart</button>
+            </input>
+            </div>
+            <!-- <input type="submit" value="add to cart"> -->
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

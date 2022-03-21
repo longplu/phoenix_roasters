@@ -1,5 +1,5 @@
-from statistics import quantiles
 from django.shortcuts import get_object_or_404, render, redirect, reverse
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
@@ -53,6 +53,7 @@ def signup(request):
 
 
 def shoppingcarts_index(request):
+    # return render(request, 'shoppingcarts/index.html')
     if request.user.is_authenticated:
         user=request.user
         order, created = Order.objects.get_or_create(user=user, complete=False)
@@ -66,7 +67,7 @@ def shoppingcarts_add(request):
     quantity = int(request.POST.get('quantity'))
     shoppingcart = request.session.get('shoppingcarts_index', {})
     if id in shoppingcart:
-        shoppingcart[id] = int(shoppingcart[id] + quantity)
+        shoppingcart[id] = int(shoppingcart[id]) + quantity
     else:
         shoppingcart[id] = shoppingcart.get(id, quantity)
     request.session['shoppingcarts_index'] = shoppingcart
@@ -109,12 +110,20 @@ def shoppingcarts_update(request):
 
 def products_index(request):
     products = Product.objects.all()
-    return render(request, 'products.html', {
+    paginator = Paginator(products, 6)
+    page = request.GET.get('page')
+    try:
+        products = paginator.page(page)
+    except PageNotAnInteger:
+        products = paginator.page(1)
+    except EmptyPage:
+        products = paginator.page(paginator.num_pages)
+    return render(request, 'products/index.html', {
         'products': products
     })
 
-def products_detail(request, id):
-    product = Product.objects.get(pk=id)
+def products_detail(request, product_id):
+    product = Product.objects.get(id=product_id)
     return render(request, 'products/detail.html', {
         'product': product,
     })
