@@ -6,7 +6,7 @@
  - Elvis Espinoza, Long Lu, Papa Diop and Trinity Fore
 
  # Technologies Used
-- HTML CSS JavaScript Django Python PostgreSQL
+- HTML CSS JavaScript Django Python PostgreSQL Bootstrap SASS 
 
 
 # Production Phase
