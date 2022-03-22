@@ -77,7 +77,8 @@ a {
   box-shadow: 1px 1px 2px #00000080;
   border-radius: 6px; }
   .product_img img {
-    border-radius: 6px; }
+    border-radius: 6px;
+    margin-top: 10px; }
 
 .product_content {
   vertical-align: middle;
