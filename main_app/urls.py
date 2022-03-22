@@ -18,11 +18,15 @@ urlpatterns = [
 	path('shoppingcarts/add/<item_id>/', views.shoppingcarts_add, name='shoppingcarts_add'),
 	#path('shoppingcarts/<int:shoppingcarts_id>/', views.shoppingcarts_detail, name='detail'),
 
-	path('shoppingcarts/delete/<item_id>/', views.ShoppingcartsDelete.as_view(), name='shoppingcarts_delete'),
+	#path('shoppingcarts/delete/<item_id>/', views.ShoppingcartsDelete.as_view(), name='shoppingcarts_delete'),
 
-#	path('shoppingcarts/<str:id>/', views.shoppingcarts_delete, name="shoppingcarts_delete"),
+	path('shoppingcarts/<int:id>/', views.shoppingcarts_delete, name="shoppingcarts_delete"),
 
 	#path('shoppingcarts/update/<item_id>/', views.shoppingcarts_update, name='shoppingcarts_update'),
+
+	path('shoppingcarts/add/<int:product_id>/', views.shoppingcarts_add, name='shoppingcarts_add'),
+	path('shoppingcarts/update/<int:product_id>/', views.shoppingcarts_update, name='shoppingcarts_update'),
+
 
 	path('checkouts/', views.checkouts_index, name='checkouts_index'),
 

@@ -42,11 +42,11 @@
                 <p></p>
                 <h6 class="mb-3">${{product.product.price}}</h5>
     </div>
-    <a href="/shoppingcarts/{{ shoppingcarts.id }}">
+   
               <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                <a href="{% url 'shoppingcarts_delete' shoppingcarts.id %}" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
+                <a href="{% url 'shoppingcarts_delete' product.id %}" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
               </div>
-            </a>
+           
                           
 </div>
         
