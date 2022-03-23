@@ -7,7 +7,7 @@ from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth import login
+from django.contrib.auth import login, authenticate
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 
@@ -44,10 +44,13 @@ def signup(request):
         signup_form = SignupForm(request.POST)
         if signup_form.is_valid():
             signup_form.save()
-            username = signup_form.get('username')
+            username = signup_form.cleaned_data.get('username')
+            raw_password = signup_form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=raw_password)
+            login(request, user)
             messages.success(
                 request, "You have successfully created an account!")
-            login(request, username)
+            login(request, user)
             return redirect('home')
     else:
         signup_form = SignupForm()
