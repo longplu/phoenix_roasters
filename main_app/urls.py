@@ -31,5 +31,5 @@ urlpatterns = [
 
 	path('account/signup', views.signup, name='signup'),
 
-	path('search/', views.search, name='search'),
+	path('search/', views.search_view, name='search'),
 ]

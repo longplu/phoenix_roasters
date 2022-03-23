@@ -1,0 +1,35 @@
+{% extends 'base.html %}{% block content %}
+<div class="container">
+  <section class="row">
+    <div class="col-12">
+      <h1 class="none_title">No products found</h1>
+      <p class="none_adv">Try a different search</p>
+    </div>
+  </section>
+
+  <section class="row none_more">
+    <div class="col-md-12">
+      <h3 class="none_products__options">Theres more option available!</h3>
+    </div>
+    <div class="col-12">
+      <div class="none_products__list">
+        {% for product in products %}
+        <div class="none_products__list__splitter">
+          <a href="{% url 'detail' product.id %}">
+            <img src="{{product.image_url}}" alt="" class="img_resp" />
+            <div class="none_products__list__splitter__cont">
+              <p class="none_products__list__splitter__cont__text">
+                {{product.name}}
+              </p>
+              <p class="none_products__list__list__splitter__cont__price">
+                {{product.price}}
+              </p>
+            </div>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+</div>
+{% endblock%}
