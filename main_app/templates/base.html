@@ -117,7 +117,7 @@
         </ul>
       </div>
     </nav>
-    <main>{% block content %} {% endblock %}</main>
+    <main>{% block content %}{% include 'search/overlay' %}{% endblock %}</main>
     <footer class="page-footer bg-dark">
       <div id="footer" class="text-center text-white p-3">
         <p style="font-size: 15px">Copyright © All Rights Reserved</p>
