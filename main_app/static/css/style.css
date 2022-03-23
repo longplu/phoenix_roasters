@@ -243,6 +243,17 @@ p{
     
   }
 
+
+  .jumbotron {
+    background-image: url("../img/jumbotron_bg.jpg");
+    background-size: cover;
+  }
+
+ #carousel2{
+     text-align: right;
+
+ }
+
   @import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
 
 * {
@@ -276,6 +287,7 @@ a,a:hover{
     height: 100%;
     float: left;
     box-sizing: border-box;
+    
 }
 
 .myform-area .form-area .form-content{
@@ -348,6 +360,7 @@ a,a:hover{
     width: 50%;
     background: #fff;
     padding: 40px 30px;
+    overflow: scroll;
 }
 
 .myform-area .form-area .form-input h2{
@@ -365,23 +378,6 @@ a,a:hover{
     padding: 20px 0;
 }
 
-
-#wrapper {
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    
-  }
-
-  .jumbotron {
-    background-image: url("../img/jumbotron_bg.jpg");
-    background-size: cover;
-  }
-
- #carousel2{
-     text-align: right;
-
- }
 
 .myform-area .form-area .form-input input,
 .myform-area .form-area .form-input textarea{
@@ -447,7 +443,6 @@ a,a:hover{
     -o-transition: all .5s;
     transition: all .5s;
 }
-
 
 .myform-area .form-area .myform-button .myform-btn:hover{
     background: #07315B;
