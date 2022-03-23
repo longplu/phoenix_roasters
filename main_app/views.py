@@ -78,7 +78,6 @@ def shoppingcarts_delete(request, id):
     """
     Adjust the quantity of the specified product to the specified
     amount
-
     url for this function should be <str:id> not <int:id>
     - otherwise you need to add str() method for each dict representation.
     """
