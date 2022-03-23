@@ -29,5 +29,7 @@ urlpatterns = [
 
 	path('checkouts/', views.checkouts_index, name='checkouts_index'),
 
-	path('account/signup', views.signup, name='signup')
+	path('account/signup', views.signup, name='signup'),
+
+	path('search/', views.search_view, name='search'),
 ]
