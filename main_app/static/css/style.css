@@ -133,7 +133,10 @@ nav {
         color:#e02b20 ;
         font-weight: 200;
       
-    }
+    } }
+
+  element.style {
+    background-image: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')
   }
 
 
@@ -353,14 +356,14 @@ a,a:hover{
 .myform-area .form-area .form-input{
   background-color: white;
   position: relative;
-  overflow: hidden;
+  overflow: scroll;
   box-shadow: 0 0 40px 0 #e1e1e1;
 }
 .myform-area .form-area .form-input{
     width: 50%;
     background: #fff;
     padding: 40px 30px;
-    overflow: scroll;
+    
 }
 
 .myform-area .form-area .form-input h2{
