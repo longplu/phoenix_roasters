@@ -22,7 +22,9 @@
               />
               <div class="carousel-caption d-none d-md-block">
                 <h5 class="text-white">WELCOME TO PHOENIX ROASTERS</h5>
-                <button class="text-white but btn">BUY COFFEES</button>
+                <a href="{% url 'index' %}">
+                  <button class="text-white but btn">BUY COFFEES</button>
+                </a>
               </div>
             </div>
             <div class="carousel-item active">
@@ -34,10 +36,11 @@
               <div id="carousel2" class="carousel-caption d-none d-md-block">
                 <h5 class="text-white">TIME TO DISCOVER</h5>
                 <h5 class="text-white">PHOENIX ROASTERS</h5>
-
-                <button class="text-white but btn">
-                  LEARN MORE <i class="bi bi-arrow-right-circle"></i>
-                </button>
+                <a href="{% url 'about' %}">
+                  <button class="text-white but btn">
+                    LEARN MORE <i class="bi bi-arrow-right-circle"></i>
+                  </button>
+                </a>
               </div>
             </div>
             <div class="carousel-item">
