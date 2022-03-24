@@ -118,20 +118,20 @@
             <h2 class="home_fav__products__heading">What's Your Favorite?</h2>
           </div>
           <div class="col-12">
-            <div class="home_fav__products__side">
+            <div class="home_fav__products__slick">
               {% for product in products %}
-              <div class="home_fav__products__side__slide">
+              <div class="home_fav__products__slick__slide">
                 <a href="{% url 'detail' product.id %}">
                   <img
                     src="{{product.image_url}}"
                     alt="{{product.name}}"
                     class="img_resp"
                   />
-                  <div class="home_fav__products__side__slide__cont">
-                    <p class="home_fav__products__side__slide__cont__name">
+                  <div class="home_fav__products__slick__slide__cont">
+                    <p class="home_fav__products__slick__slide__cont__name">
                       {{product.name}}
                     </p>
-                    <p class="home_fav__products__side__slide__cont__price">
+                    <p class="home_fav__products__slick__slide__cont__price">
                       {{product.price}}
                     </p>
                   </div>

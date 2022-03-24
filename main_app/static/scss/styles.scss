@@ -45,7 +45,7 @@ $border-radius: 6px;
       text-align: center;
     }
 
-    &__side {
+    &__slick {
       &__slide {
         padding: 0 16px;
 
@@ -80,6 +80,54 @@ $border-radius: 6px;
 
 a {
   transition: $fast-transition;
+}
+
+.search {
+  z-index: 1;
+  position: fixed;
+  border-radius: $border-radius;
+  padding: 25px;
+  background-position: center;
+  left: 50%;
+  top: 30%;
+  background-size: cover;
+  width: 40%;
+  transform: translate(-50%, -50%);
+  box-shadow: $pan-shadow;
+
+  &_low {
+    display: flex;
+    border-radius: $border-radius;
+    box-shadow: $pan-shadow;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    &__imp {
+      width: 100%;
+      padding: 8px;
+      border-radius: 5px 0 5px;
+      border: none;
+      outline: none;
+    }
+
+    &__btn {
+      background-color: $primary-color;
+      width: 15%;
+      transition: $fast-transition;
+      border-radius: 0 5px 5px 0;
+      padding: 8px;
+      border: none;
+
+      &:hover {
+        background: darken($primary-color, 15%);
+        color: lighten($black-color, 15%);
+      }
+    }
+  }
+
+  &_low {
+    display: none;
+  }
 }
 
 .pagination {
