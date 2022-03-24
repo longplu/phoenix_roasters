@@ -82,6 +82,26 @@ a {
   transition: $fast-transition;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  transition: $slow-transition;
+  z-index: 1;
+  opacity: 0;
+  background-color: $black-color;
+  height: 100%;
+  width: 100%;
+  right: 0;
+  visibility: hidden;
+
+  &_show {
+    opacity: 0.1;
+    visibility: visible;
+  }
+}
+
 .search {
   z-index: 1;
   position: fixed;
