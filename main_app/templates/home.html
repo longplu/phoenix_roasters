@@ -1,4 +1,4 @@
-{% extends 'base.html'%} {% load static %}
+{% extends 'base.html'%} {% load static %} {% load sass_tags %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,9 +10,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-
+    <link
+      rel="stylesheet"
+      href="{% sass_src 'scss/styles.scss' %}"
+      type="text/css"
+    />
     <!-- Font Awesome -->
-
     <title>Home</title>
   </head>
 
@@ -108,42 +111,44 @@
     <br />
     <br />
     <br />
-    <div class="container">
-      <section class="row home_lay">
-        <div class="col-md-12">
-          <h2 class="home_fav__products__heading">What's Your Favorite?</h2>
-        </div>
-        <div class="col-12">
-          <div class="home_fav__products__side">
-            {% for product in products %}
-            <div class="home_fav__products__side___slide">
-              <a href="{% url 'detail' product.id %}">
-                <img
-                  src="{{product.image_url}}"
-                  alt="{{product.name}}"
-                  class="img_resp"
-                />
-                <div class="home_fav__products__side__slide__cont">
-                  <p class="home_fav__products__side__slide__cont__name">
-                    {{product.name}}
-                  </p>
-                  <p class="home_fav__products__side__slide__cont__price">
-                    {{product.price}}
-                  </p>
-                </div>
-              </a>
-            </div>
-            {% endfor %}
+    <div class="home">
+      <div class="container">
+        <section class="row home_lay">
+          <div class="col-md-12">
+            <h2 class="home_fav__products__heading">What's Your Favorite?</h2>
           </div>
-        </div>
-      </section>
+          <div class="col-12">
+            <div class="home_fav__products__side">
+              {% for product in products %}
+              <div class="home_fav__products__side__slide">
+                <a href="{% url 'detail' product.id %}">
+                  <img
+                    src="{{product.image_url}}"
+                    alt="{{product.name}}"
+                    class="img_resp"
+                  />
+                  <div class="home_fav__products__side__slide__cont">
+                    <p class="home_fav__products__side__slide__cont__name">
+                      {{product.name}}
+                    </p>
+                    <p class="home_fav__products__side__slide__cont__price">
+                      {{product.price}}
+                    </p>
+                  </div>
+                </a>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
     <!-- <section style="background-color: rgb(255, 255, 255)">
-      <h2>What's Your Favorite?</h2>
-      <div id="wrapper">
-        {% for product in products %}
-        <div class="container">
-          <div
+        <h2>What's Your Favorite?</h2>
+        <div id="wrapper">
+          {% for product in products %}
+          <div class="container">
+            <div
             class="card mx-auto col-md-8 col-10 mt-5 pt-4 shadow-lg p-3 mb-5"
             style="box-shadow: 1px 1px 7px black"
           >

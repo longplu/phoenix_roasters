@@ -1,3 +1,17 @@
+.home_fav__products__heading {
+  text-align: center; }
+
+.home_fav__products__side__slide {
+  padding: 0 16px; }
+  .home_fav__products__side__slide__cont {
+    box-shadow: 1px 1px 2px #00000080;
+    background: #a7daf1;
+    text-align: center;
+    border-radius: 6px;
+    padding: 12px; }
+    .home_fav__products__side__slide__cont__name {
+      color: #ffffff; }
+
 .img_resp {
   max-width: 100%;
   margin: auto;

@@ -1,1 +1,11 @@
-<div class="search search_low"></div>
+<div class="search search_low">
+  <form action="{% url 'search' %}" method="GET" class="search_form">
+    <input
+      type="text"
+      name="q"
+      placeholder="Search for product"
+      class="search_form__inp"
+    />
+    <button class="search_form__btn" type="search">search</button>
+  </form>
+</div>

@@ -39,6 +39,32 @@ $border-radius: 6px;
   }
 }
 
+.home {
+  &_fav__products {
+    &__heading {
+      text-align: center;
+    }
+
+    &__side {
+      &__slide {
+        padding: 0 16px;
+
+        &__cont {
+          box-shadow: $pan-shadow;
+          background: $secondary-color;
+          text-align: center;
+          border-radius: $border-radius;
+          padding: 12px;
+
+          &__name {
+            color: $white-color;
+          }
+        }
+      }
+    }
+  }
+}
+
 .img_resp {
   max-width: 100%;
   margin: auto;
