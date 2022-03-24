@@ -1,4 +1,4 @@
-{% extends 'base.html %}{% block content %}
+{% extends 'base.html' %}{% block content %}
 <div class="container">
   <section class="row">
     <div class="col-12">
@@ -9,21 +9,21 @@
     </div>
   </section>
 
-  <section class="row none_more">
+  <section class="row home_lay">
     <div class="col-md-12">
-      <h3 class="none_products__options">Theres more option available!</h3>
+      <h3 class="none_products__options">Theres more options available!</h3>
     </div>
     <div class="col-12">
-      <div class="none_products__list">
+      <div class="home_fav__products__slick">
         {% for product in products %}
-        <div class="none_products__list__splitter">
+        <div class="home_fav__products__slick__slide">
           <a href="{% url 'detail' product.id %}">
             <img src="{{product.image_url}}" alt="" class="img_resp" />
-            <div class="none_products__list__splitter__cont">
-              <p class="none_products__list__splitter__cont__text">
+            <div class="home_fav__products__slick__slide__cont">
+              <p class="home_fav__products__slick__slide__cont__name">
                 {{product.name}}
               </p>
-              <p class="none_products__list__list__splitter__cont__price">
+              <p class="home_fav__products__slick__slide__cont__price">
                 {{product.price}}
               </p>
             </div>

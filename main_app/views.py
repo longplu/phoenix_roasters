@@ -146,7 +146,7 @@ def search_view(request):
     else:
         search_query = request.GET['q']
         products = Product.objects.all()
-        return render(request, 'none.html', {'products': products, 'search_query': search_query})
+        return render(request, 'search/none.html', {'products': products, 'search_query': search_query})
 
 
 """"""""""""""""""""""""""
