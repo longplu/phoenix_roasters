@@ -1,16 +1,30 @@
 // variables
-const shoppingcartsEditQuantity = document.getElementById("");
-const shoppingcartsAdd = document.getElementById("#shoppingcarts-add");
-const shoppingcartsForm = document.getElementById("#shoppingcarts-form");
-
-const overlay = $("#overlay");
-const searchBtn = $("#search-button");
 
 //
-searchBtn.on("click", function () {
-  $(".search").removeClass("search__hide");
-  overlay.addClass("overlay__show");
+$(document).ready(function () {
+  $("#search-close").click(function () {
+    $("#search-overlay").fadeOut();
+    $("#search-button").show();
+  });
+  $("#search-button").click(function () {
+    $(this).hide();
+    $("#search-overlay").fadeIn();
+  });
 });
+// searchBtn.on("click", function () {
+//   $(".search").removeClass("search_low");
+//   overlay.addClass("overlay_show");
+// });
+
+// $(".navbar-toggler").on("click", function () {
+//   overlay.addClass("overlay_show");
+//   $("html").addClass("open-nav");
+// });
+
+// overlay.on("click", function () {
+//   $("search").addClass("search_low");
+//   overlay.removeClass("overlay_show");
+// });
 
 $(".home_fav__products__slick").slick({
   infinite: true,
