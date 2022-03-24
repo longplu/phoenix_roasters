@@ -11,3 +11,29 @@ searchBtn.on("click", function () {
   $(".search").removeClass("search__hide");
   overlay.addClass("overlay__show");
 });
+
+$(".home_fav__products__slick").slick({
+  infinite: true,
+  slideToShow: 4,
+  slidesToScroll: 1,
+  arrow: false,
+  dots: false,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  responsive: [
+    {
+      breakpoint: 550,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 990,
+      setting: {
+        slideToShow: 4,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+});
