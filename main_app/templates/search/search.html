@@ -1,12 +1,11 @@
 <div id="search-overlay" class="search search_low">
-  <div id="search-close">x</div>
   <form action="{% url 'search' %}" method="GET" class="search_form">
     <input
       type="text"
       name="q"
       placeholder="Search for product"
-      class="search_form__inp"
+      class="search_low__inp"
     />
-    <button class="search_form__btn" type="search">search</button>
+    <button class="search_low__btn" type="search">search</button>
   </form>
 </div>
