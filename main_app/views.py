@@ -68,15 +68,17 @@ def shoppingcarts_index(request):
     context = {'products': products}
     return render(request, 'shoppingcarts/index.html', context)
 
-def shoppingcarts_add(request):
+
+def shoppingcarts_add(request, product_id):
     quantity = int(request.POST.get('quantity'))
     shoppingcart = request.session.get('shoppingcarts_index', {})
-    if id in shoppingcart:
-        shoppingcart[id] = int(shoppingcart[id]) + quantity
+    print(shoppingcart)
+    if product_id in shoppingcart:
+        shoppingcart[product_id] = int(shoppingcart[product_id]) + quantity
     else:
-        shoppingcart[id] = shoppingcart.get(id, quantity)
+        shoppingcart[product_id] = shoppingcart.get(product_id, quantity)
     request.session['shoppingcarts_index'] = shoppingcart
-    return redirect(reverse('shoppingcarts_index'))
+    return redirect('shoppingcarts_index')
 
 def products_index(request):
     products = Product.objects.all()

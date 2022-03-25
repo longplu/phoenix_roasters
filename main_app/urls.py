@@ -15,7 +15,7 @@ urlpatterns = [
 	#path('products/<int:pk>/delete/', views.ProductDelete.as_view(), name='products_delete'),
 
 	path('shoppingcarts/', views.shoppingcarts_index, name='shoppingcarts_index'),
-	path('shoppingcarts/add/<item_id>/', views.shoppingcarts_add, name='shoppingcarts_add'),
+	# path('shoppingcarts/add/<item_id>/', views.shoppingcarts_add, name='shoppingcarts_add'),
 	#path('shoppingcarts/<int:shoppingcarts_id>/', views.shoppingcarts_detail, name='detail'),
 
 	#path('shoppingcarts/delete/<item_id>/', views.ShoppingcartsDelete.as_view(), name='shoppingcarts_delete'),
