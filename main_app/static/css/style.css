@@ -20,7 +20,7 @@ footer {
 
 a,
 .nav-link {
-  color: #2f398e;
+  color: #0062cc;
   font: 12px;
   font-weight: 700;
   font-family: "Roboto Condensed", sans-serif;
@@ -29,7 +29,7 @@ a,
 
 
 a, .nav-link {
-    color: #2F398E;
+    color: #0062cc;
     font: 12px ;
     font-weight: 500;
     font-family: 'Oleo Script', cursive;
@@ -44,7 +44,7 @@ a, .nav-link {
 }
 
 .ROSTER{
-    color: #2F398E;
+    color: #0062cc;
 }
 
 
@@ -65,7 +65,7 @@ nav {
 
 #signup{
     background-color: #e02b20;
-    border: 1px solid #2F398E;
+    border: 1px solid #0062cc;
     border-radius: 5%;
     font-family: 'Roboto Condensed', sans-serif;
     float: left;
@@ -238,6 +238,14 @@ p{
   
 }
 
+.col-md-6{
+ justify-content: center;
+}
+
+.product_content__add{
+    justify-content: center;
+    margin-bottom: 10px;
+}
 
 #wrapper {
 
@@ -319,12 +327,12 @@ a,a:hover{
 .myform-area .form-area .form-content .facebook{
   display: block;
   padding: 10px 20px;
-  background: #3B579D;
+  background: #0062cc;
   color: #fff;
   font-size: 15px;
   text-transform: capitalize;
   border-radius: 4px;
-  border: 1px solid #3B579D;
+  border: 1px solid #0062cc;
   -webkit-transition: all .5s;
   -o-transition: all .5s;
   transition: all .5s;
@@ -448,8 +456,7 @@ a,a:hover{
 }
 
 .myform-area .form-area .myform-button .myform-btn:hover{
-    background: #07315B;
-
+background: #0062cc;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
