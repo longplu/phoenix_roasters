@@ -40,9 +40,9 @@
             src="../static/images/coffee1.png"
             alt="First slide"
           />
-          <div class="carousel-caption d-none d-md-block">
-            <h5 class="text-white">WELCOME TO PHOENIX ROASTERS</h5>
-            <button class="text-white but btn">BUY COFFEES  </button>
+          <div class="carousel-caption d-none  d-md-block">
+            <h5 id="caption1" class="text-white">WELCOME TO PHOENIX ROASTERS</h5>
+            <a href="{% url 'index' %}"class="text-white but btn  btn-outline-danger">BUY COFFEES</a>
           </div>
         </div>
 
@@ -52,11 +52,11 @@
             src="../static/images/coffee2.png"
             alt="Second slide"
           />
-          <div id="carousel2" class="carousel-caption d-none d-md-block">
-            <h5 class="text-white">TIME TO DISCOVER </h5>
-            <h5 class="text-white">PHOENIX ROASTERS</h5>
+          <div id="carousel2" class="carousel-caption  d-md-block">
+            <h6 class="text-white">TIME TO DISCOVER </h6>
+            <h6 class="text-white">PHOENIX ROASTERS</h6>
 
-            <button class="text-white but btn ">LEARN MORE <i class="bi bi-arrow-right-circle"></i>
+            <button class="text-white but btn btn-outline-primary ">LEARN MORE <i class="bi bi-arrow-right-circle"></i>
             </button>
           </div>
         </div>
@@ -95,7 +95,7 @@
     <br />
     <br />
     <section style="background-color: rgb(255, 255, 255)">
-      <h1>What's Your Favorite?</h1>
+      <h1>Popular Picks</h1>
 
       <div id="wrapper">
         {% for product in products %}
@@ -118,7 +118,7 @@
               </a>
             </div>
             <div class="btn">
-              <button type="button" class="btn btn-danger">Add Cart</button>
+              <a href="{% url 'add_to_cart' args=(item.book.id,) %}" type="button" class="btn btn-danger">Add Cart</button>
             </div>
           </div>
         </div>

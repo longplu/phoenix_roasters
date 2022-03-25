@@ -101,6 +101,8 @@ def products_detail(request, product_id):
     })
 
 @login_required()
+
+
 def checkouts_index(request):
     if request.method == "POST":
         order_form = OrderForm(request.POST)
