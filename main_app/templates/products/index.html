@@ -1,6 +1,4 @@
-{% extends 'base.html' %}
-
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 <div class="container">
   <section class="row">
     {% for product in products %}
@@ -22,7 +20,7 @@
               <p>{{product.description}}</p>
             </div>
             <div class="products_wrapper__content__price">
-              <p>From: {{product.price}}</p>
+              <p>From: ${{product.price}}</p>
             </div>
           </div>
         </div>

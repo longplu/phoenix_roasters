@@ -1,102 +1,59 @@
 
+{% extends 'base.html'%} {% block content%}
 
-{% extends 'base.html'%}
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+<div class="jumbotron" style="background-color: #343a40; background-size: 50%">
+  <div class="container for-about">
+    <h1 class="text-white">Contact Us</h1>
+    <hr style="color: rgb(255, 255, 255)" />
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-
-    <title>Contact Us</title>
-</head>
-
-<body>
- 
- 
-  
-
-    {% block content%}
-
-
-    <div class="jumbotron" style="background-image: url(https://images.unsplash.com/photo-1587985782610-f114593ea92f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80); background-size: cover;">
-      <div class="container for-about">
-      <h1 class="text-white">Contact Us</h1>
-      <hr style="color: rgb(255, 255, 255);">
-      </div>
-      
+      <h6 class="bi bi-telephone-fill text-center">Phone</h6>
+      <p class="text-center">210-206-8062</p>
+      <br />
+      <h6 class="bi bi-envelope-fill text-center">Email</h6>
+      <p class="text-center">Phoenix@roaster.com</p>
+      <br />
+      <h6 class="bi bi-geo-alt-fill text-center">Address</h6>
+      <p class="text-center">3 Summerhouse Street San Antonio, TX 78210</p>
     </div>
-    <div class="container">
-        <div class="row">
-          <div class="col">
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<h6 class=" bi bi-telephone-fill text-center"> Phone</h6>
-<p class="text-center">210-206-8062</p>
-<br>
-<h6 class="bi bi-envelope-fill text-center"> Email</h6>
-<p class="text-center">Phoenix@roaster.com</p>
-<br>
-<h6 class="bi bi-geo-alt-fill text-center">Address</h6>
-<p class="text-center" >3 Summerhouse Street
-    San Antonio, TX 78210</p>
-
-
-
-          </div>
-          <div class="col">
-                <h1 class="text-dark">Spill the Beans.</h1>
-            <form>
-                <!-- Name input -->
-                <div class="form-outline mb-4">
-                  <input type="text" id="form4Example1" class="form-control" />
-                  <label class="form-label" for="form4Example1">Name</label>
-                </div>
-              
-                <!-- Email input -->
-                <div class="form-outline mb-4">
-                  <input type="email" id="form4Example2" class="form-control" />
-                  <label class="form-label" for="form4Example2">Email address</label>
-                </div>
-              
-                <!-- Message input -->
-                <div class="form-outline mb-4">
-                  <textarea class="form-control" id="form4Example3" rows="4"></textarea>
-                  <label class="form-label" for="form4Example3">Message</label>
-                </div>
-              
-                <!-- Checkbox -->
-                <div class="form-check d-flex justify-content-center mb-4">
-                
-                </div>
-              
-                <!-- Submit button -->
-                <button type="submit" class="btn btn-dark btn-block mb-4">Send</button>
-              </form>
-
-
-
-          </div>
-    
+    <div class="col">
+      <h1 class="text-dark">Get in Touch</h1>
+      <form>
+        <!-- Name input -->
+        <div class="form-outline mb-4">
+          <input type="text" id="form4Example1" class="form-control" />
+          <label class="form-label" for="form4Example1">Name</label>
         </div>
-      </div>
-    
 
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <input type="email" id="form4Example2" class="form-control" />
+          <label class="form-label" for="form4Example2">Email address</label>
+        </div>
 
+        <!-- Message input -->
+        <div class="form-outline mb-4">
+          <textarea class="form-control" id="form4Example3" rows="4"></textarea>
+          <label class="form-label" for="form4Example3">Message</label>
+        </div>
 
+        <!-- Checkbox -->
+        <div class="form-check d-flex justify-content-center mb-4"></div>
 
-    {% endblock %}
-</body>
-</html>
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-dark btn-block mb-4">Send</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

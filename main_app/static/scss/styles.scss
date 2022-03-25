@@ -39,6 +39,59 @@ $border-radius: 6px;
   }
 }
 
+// .home_fav__products {
+//   &__heading {
+//     text-align: center;
+//   }
+
+//   &__slick {
+//     &__slide {
+//       padding: 0 20px;
+
+//       &__cont {
+//         box-shadow: $pan-shadow;
+//         text-align: center;
+//         background: $secondary-color;
+//         padding: 15px;
+//         border-radius: $border-radius;
+
+//         &__name {
+//           color: $white-color;
+//         }
+//       }
+//     }
+//   }
+// }
+.home {
+  &_lay {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  &_fav__products {
+    &__heading {
+      text-align: center;
+    }
+
+    &__slick {
+      &__slide {
+        padding: 0 16px;
+
+        &__cont {
+          box-shadow: $pan-shadow;
+          background: $secondary-color;
+          text-align: center;
+          border-radius: $border-radius;
+          padding: 12px;
+          &__name {
+            color: $white-color;
+          }
+        }
+      }
+    }
+  }
+}
+
 .img_resp {
   max-width: 100%;
   margin: auto;
@@ -56,6 +109,78 @@ $border-radius: 6px;
 
 a {
   transition: $fast-transition;
+}
+
+.hidden {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  transition: $slow-transition;
+  z-index: 1;
+  opacity: 0;
+  background-color: $black-color;
+  height: 100%;
+  width: 100%;
+  right: 0;
+  visibility: hidden;
+
+  &_show {
+    opacity: 0.6;
+    visibility: visible;
+  }
+}
+
+.search {
+  z-index: 1;
+  position: fixed;
+  border-radius: $border-radius;
+  padding: 25px;
+  background-position: center;
+  left: 50%;
+  top: 30%;
+  background-size: cover;
+  width: 40%;
+  transform: translate(-50%, -50%);
+  box-shadow: $pan-shadow;
+
+  &_low {
+    display: flex;
+    border-radius: $border-radius;
+    box-shadow: $pan-shadow;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    &__imp {
+      width: 100%;
+      padding: 8px;
+      border-radius: 5px 0 5px;
+      border: none;
+      outline: none;
+    }
+
+    &__btn {
+      background-color: $primary-color;
+      width: 15%;
+      transition: $fast-transition;
+      border-radius: 0 5px 5px 0;
+      padding: 8px;
+      border: none;
+
+      &:hover {
+        background: darken($primary-color, 15%);
+        color: lighten($black-color, 15%);
+      }
+    }
+  }
+
+  &_low {
+    display: none;
+  }
 }
 
 .pagination {
@@ -225,6 +350,14 @@ a {
       background: darken($primary-color, 15%);
       color: lighten($black-color, 15%);
     }
+  }
+}
+
+.sc_none {
+  text-align: center;
+
+  p {
+    padding: 12px 0;
   }
 }
 
