@@ -112,7 +112,7 @@ nav {
 
 @media only screen and (max-width: 600px) {
     body {
-      background-color: rgb(255, 255, 255);
+      background-color: rgb(177, 23, 23);
     }
     .text-hover {
         position: absolute;
@@ -133,12 +133,17 @@ nav {
         color:#e02b20 ;
         font-weight: 200;
       
-    } }
+    }
+    #caption1{
+        font-size: large;
+        display: flex;
+    justify-content: center;
+    top: 40%;
+    }
 
   element.style {
     background-image: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')
   }
-
 
 
   #shopcoffee{
@@ -157,8 +162,7 @@ nav {
       text-align: center;
   }
 
-
-
+ 
 .card {
     width: fit-content
 }
@@ -197,18 +201,28 @@ img, #images {
 }
 
 h5{
-    font-size: 40px;
-    line-height: 1.5;
+    font-size: 45px;
+    line-height: 2;
     letter-spacing: .015cm;
     position: relative;
-    font-weight: 100;
+    font-weight: 50;
     font-family: 'Oleo Script', cursive;    
     white-space:nowrap;
-    text-decoration: underline;    
     text-decoration-thickness: 2px;
 
 }
 
+h6{
+    font-size: 45px;
+    line-height: 2;
+    letter-spacing: .015cm;
+    position: relative;
+    font-weight: 50;
+    font-family: 'Oleo Script', cursive;    
+    white-space:nowrap;
+    text-decoration-thickness: 2px;
+
+}
 
 
 h3{
@@ -222,15 +236,32 @@ h3{
     top: 40%;
 }
 
+#carousel2{
+    display: flex;
+    justify-content: center;
+    top: 30%;
+    left: 50%;
+}
+
+h5:hover{
+    color: #e02b20;
+ 
+}
+
 .but{
     background-color: transparent;
     background-repeat: no-repeat;
     border: 1px solid white;
     outline: none;
-    font-size: small;
+    font-size: medium;
     font-family: 'Oleo Script', cursive;  
+    font-weight: 100;
     
     
+}
+.but:hover{
+    border: 1px solid white;
+    color: #07315B;
 }
 
 p{
@@ -376,7 +407,7 @@ a,a:hover{
 
 .myform-area .form-area .form-input h2{
   margin-bottom: 20px;
-    color: #07315B;
+    color: hsl(0, 0%, 0%);
 }
 
 .myform-area .form-area .form-input input{
