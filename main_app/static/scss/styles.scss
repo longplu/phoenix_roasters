@@ -1,9 +1,9 @@
 // colors
-$primary-color: #68686885;
-$secondary-color: #a7daf1;
-$third-color: #e29999;
+$primary-color: #007bff;
+$secondary-color: #007bff;
+$third-color: #e02b20;
 $white-color: #ffffff;
-$green-color: #36e726;
+$green-color: #007bff;
 $off-white-color: #f2f2f2;
 $black-color: #000;
 $txt-white: #61abf0;
@@ -96,6 +96,8 @@ $border-radius: 6px;
   max-width: 100%;
   margin: auto;
   display: block;
+  margin-bottom: 10px;
+  justify-content: center;
 }
 
 .ali {
@@ -240,7 +242,7 @@ a {
     &:hover {
       text-decoration: none;
       h4 {
-        color: $primary-color;
+        background-color: $third-color;
       }
     }
   }
@@ -342,7 +344,7 @@ a {
 
   &_add {
     background-color: $primary-color;
-    color: $black-color;
+    color: $off-white-color;
 
     &:hover {
       background: darken($primary-color, 15%);

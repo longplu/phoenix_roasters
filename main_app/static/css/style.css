@@ -19,7 +19,7 @@ footer {
 
 a,
 .nav-link {
-  color: #2f398e;
+  color: #0062cc;
   font: 12px;
   font-weight: 700;
   font-family: "Roboto Condensed", sans-serif;
@@ -31,7 +31,6 @@ a,
   font: 12px;
   font-weight: 500;
   font-family: "Oleo Script", cursive;
-}
 
 .PHOENIX {
   color: #e02b20;
@@ -40,7 +39,7 @@ a,
 .ROSTER {
   color: #2f398e;
 }
-
+  
 nav {
   border-bottom: 1px solid rgb(235, 235, 235);
   line-height: 1.7em;
@@ -72,6 +71,7 @@ nav {
   border: 1px solid rgb(0, 0, 0);
   color: black;
 }
+
 
 .text-hover {
   position: absolute;
@@ -125,6 +125,7 @@ nav {
   font-family: "Roboto Condensed", sans-serif;
 }
 
+
 h1 {
   text-align: center;
   color: red;
@@ -169,6 +170,7 @@ img,
   background-color: rgba(84, 84, 84, 0.29);
 }
 
+
 h5 {
   font-size: 40px;
   line-height: 1.5;
@@ -183,6 +185,7 @@ h5 {
 
 h3 {
   font-family: "Roboto Condensed", sans-serif;
+
 }
 
 .carousel-caption {
@@ -190,6 +193,7 @@ h3 {
   justify-content: center;
   top: 40%;
 }
+
 
 .but {
   background-color: transparent;
@@ -199,10 +203,15 @@ h3 {
   font-size: small;
   font-family: "Oleo Script", cursive;
 }
+.but:hover{
+    border: 1px solid white;
+    color: #07315B;
+}
 
 p {
   font-family: "Roboto Condensed", sans-serif;
 }
+
 
 #wrapper {
   display: grid;
@@ -210,6 +219,7 @@ p {
 }
 
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400");
+
 
 * {
   margin: 0;
@@ -243,6 +253,7 @@ a:hover {
   height: 100%;
   float: left;
   box-sizing: border-box;
+
 }
 
 .myform-area .form-area .form-content {
@@ -308,7 +319,7 @@ a:hover {
 .myform-area .form-area .form-input {
   background-color: white;
   position: relative;
-  overflow: hidden;
+  overflow: scroll;
   box-shadow: 0 0 40px 0 #e1e1e1;
 }
 .myform-area .form-area .form-input {
@@ -332,6 +343,7 @@ a:hover {
   padding: 20px 0;
 }
 
+
 #wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -345,6 +357,7 @@ a:hover {
 #carousel2 {
   text-align: right;
 }
+
 
 .myform-area .form-area .form-input input,
 .myform-area .form-area .form-input textarea {
@@ -413,7 +426,6 @@ a:hover {
 
 .myform-area .form-area .myform-button .myform-btn:hover {
   background: #07315b;
-
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
