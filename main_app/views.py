@@ -137,10 +137,19 @@ def shoppingcarts_update(request):
 
 
 def shoppingcarts_delete(request, id):
-        CartOrder.objects.filter(id=id).delete()
-        messages.success(request, 'Your item has been delete')
-        return HttpResponseRedirect('/shoppingcarts')
-    
+    CartOrder.objects.filter(id=id).delete()
+    messages.success(request, 'Your item has been delete')
+    return HttpResponseRedirect('/shoppingcarts')
+
+def search_view(request):
+    products = Product.objects.filter(name__icontains=request.GET['q'])
+    if products.exists():
+        return render(request, 'products/index.html', {'products': products})
+    else:
+        search_query = request.GET['q']
+        products = Product.objects.all()
+        return render(request, 'none.html', {'products': products, 'search_query': search_query})
+
 
 """"""""""""""""""""""""""
 
